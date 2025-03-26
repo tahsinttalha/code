@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     // take anton's input
-    vector <char> alpha;
+    vector <char> alpha, unique;
     string input;
     getline(cin, input);
 
@@ -24,32 +24,25 @@ int main()
     }
 
     sort(alpha.begin(), alpha.end());
-    for (int i = 0; i < alpha.size(); i++)
+    
+    if (alpha.size() == 0)
     {
-        cout << alpha.at(i) << " ";
+        cout << 0 << endl;
+        return 0;
     }
-    cout << endl;
-
-    for (int i = 0; ; i++)
+    
+    else
     {
-        if (alpha[i + 1] == 0)
-        {
-            break;
-        }
+        unique.push_back(alpha[0]);
         
-        else 
-        {   
-            if (alpha[i] == alpha[i + 1])
+        for (int i = 1; i < alpha.size(); i++)
+        {
+            if (alpha.at(i) != unique.at(unique.size() - 1))
             {
-                alpha.erase(alpha.begin() + i + 1);
+                unique.push_back(alpha.at(i));
             }
         }
-    }
 
-    for (int i = 0; i < alpha.size(); i++)
-    {
-        cout << alpha.at(i) << endl;
+        cout << unique.size() << endl;
     }
-
-    cout << alpha.size() << endl;
 }
