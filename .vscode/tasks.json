@@ -4,7 +4,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+            "command": "C:/msys64/mingw64/bin/gcc.exe",
             "args": [
                 "-O0",
                 "-g",
