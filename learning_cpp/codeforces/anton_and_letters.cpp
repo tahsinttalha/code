@@ -41,7 +41,7 @@ int main()
         {   
             if (alpha[i] == alpha[i + 1])
             {
-                alpha.erase(alpha.begin() + i);
+                alpha.erase(alpha.begin() + i + 1);
             }
         }
     }
