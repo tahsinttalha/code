@@ -1,0 +1,10 @@
+https://codeforces.com/problemset/problem/268/A
+
+Read the number of teams n.
+Store the home and guest uniform colours for each team.
+For i to (n - 1)
+    for j to (n - 1) while i != j
+        if colour[i][0] == colour[j][1]
+            increate counter by 1
+        else
+            continue
