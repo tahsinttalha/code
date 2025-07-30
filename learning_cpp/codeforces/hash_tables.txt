@@ -1,0 +1,6 @@
+# The Principle of Hash Table
+
+Hash table is a data structure that uses "hash function" to make "quick insertion and search".
+The main principal of a hash table is to map keys to an address so that those keys can be derived again when requested.
+
+# Designing a Hash Table

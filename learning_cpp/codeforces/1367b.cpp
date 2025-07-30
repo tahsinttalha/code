@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <iostream>
 #include <vector>
 
@@ -10,24 +9,31 @@ int main() {
     
     while (t--)
     {
-        int n, odd_count_array = 0, odd_count_index = 0, even_count_array = 0, even_count_index = 0, swap_2x = 0;
+        int n, odd_index = 0, odd_value = 0, even_index = 0, even_value = 0;
         cin >> n;
-
-        vector <int> array (n);
+        vector <int> arr (n);
+        
         for (int i = 0; i < n; i++)
         {
-            cin >> array[i];
+            cin >> arr[i];
 
-            if (array[i] % 2 != i % 2)
+            if (i % 2 != arr[i] % 2)
             {
-                swap_2x++;
-                if (array[i])
+                if (i % 2 == 0)
+                    odd_index++;
+                else
+                    even_index++;
+                
+                if (arr[i] % 2 == 0)
+                    odd_value++;
+                else
+                    even_value++;
             }
         }
 
-        if (swap_2x % 2 == 0)
+        if (odd_index == even_index)
         {
-            cout << swap_2x / 2 << endl;
+            cout << odd_index << endl;
         }
         else
         {
