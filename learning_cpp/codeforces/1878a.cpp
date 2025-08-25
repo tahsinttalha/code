@@ -1,35 +1,34 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
+    #include <iostream>
+    #include <vector>
 
-using namespace std;
+    using namespace std;
 
-int main() {
-    int test;
-    cin >> test;
-
-    while (test--)
-    {
-
-        int n, k;
-        cin >> n >> k;
-        vector <int> num, occ;
-
-        for (int i = 0; i < n; i++)
+    int main() {
+        int t;
+        cin >> t;
+        
+        while (t--)
         {
-            int a;
-            cin >> a;
+            int n, k, count = 0;
+            cin >> n >> k;
 
-            num.push_back(a);
-        }
-
-        int len = num.size();
-        for (int i = 0; i < len; i++)
-        {
-            for (int j = 0; j < len - 1 && i != j; j++)
+            vector <int> arr (n);
+            for (int i = 0; i < n; i++)
             {
-                
+                cin >> arr[i];
+                if (k == arr[i])
+                {
+                    count++;
+                }
+            }
+            
+            if (count == 0)
+            {
+                cout << "NO" << endl;
+            }
+            else
+            {
+                cout << "YES" << endl;
             }
         }
     }
-}
